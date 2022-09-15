@@ -9,3 +9,5 @@ HOST_NAME=$3
 ./mkcert -install
 ./mkcert -cert-file "${MKCERT_WORKDIR}/${CERT_FILE}" \
     -key-file "${MKCERT_WORKDIR}/${KEY_FILE}" "${HOST_NAME}"
+
+chmod 644 "${MKCERT_WORKDIR}"/*
