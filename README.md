@@ -7,12 +7,6 @@
 __Create CA and PEM certificate__
 
 ```
-docker run -v $PWD:/root/.local/share/mkcert brunopadz/mkcert-docker:latest \
-/bin/sh -c "mkcert -install && \
-mkcert -cert-file /root/.local/share/mkcert/mkcert.pem \
--key-file /root/.local/share/mkcert/mkcert.key localhost.dev"
+docker run -v $PWD:/opt/mkcert/out bourke/mkcert-docker:latest \
+certfile.pem keyfile.pem localhost.dev"
 ```
-
-### Why?
-
-Well, because it's faster running a docker container than installing via and running using your package manager.
